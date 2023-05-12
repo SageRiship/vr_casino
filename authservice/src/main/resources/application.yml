@@ -1,0 +1,10 @@
+sage:
+  app:
+    jwtExpirationMs: 86400000
+    jwtSecret: sageSecretKey
+spring:
+  data:
+    mongodb:
+      database: sage_db
+      host: localhost
+      port: 27017
