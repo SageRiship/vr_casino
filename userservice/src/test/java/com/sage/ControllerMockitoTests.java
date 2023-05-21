@@ -52,8 +52,9 @@ public class ControllerMockitoTests {
 	@Order(2)
 	public void test_getUserById() {
 		user = new UserEntity(1, "rushi@gmail", "Rushi", "Paymode", "rp", "secret");
-		when(userService.getUserById(1)).thenReturn(user);
-		ResponseEntity<UserEntity> userById = userController.getUserById(1);
+		Integer id = 1;
+		when(userService.getUserById(id)).thenReturn(user);
+		ResponseEntity<UserEntity> userById = userController.getUserById(id);
 		assertEquals(HttpStatus.OK, userById.getStatusCode());
 	}
 
